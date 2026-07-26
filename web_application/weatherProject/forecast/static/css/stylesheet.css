@@ -1,0 +1,358 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ==========================
+   Global Reset
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#080808;
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.main-container{
+    position:relative;
+    width:1079px;
+    height:635px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    overflow:hidden;
+    border-radius:25px;
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+/* ==========================
+   Dynamic Backgrounds
+========================== */
+
+.main-container.clouds{
+    background-image:url("../img/cloudy.jpeg");
+}
+
+.main-container.sunny{
+    background-image:url("../img/sunny.jpeg");
+}
+
+.main-container.overcast{
+    background-image:url("../img/overcast.jpeg");
+}
+
+.main-container.mist,
+.main-container.Mist,
+.main-container.haze,
+.main-container.smoke{
+    background-image:url("../img/mist.jpeg");
+}
+
+.main-container.rain{
+    background-image:url("../img/rain.jpeg");
+}
+
+.main-container.snow{
+    background-image:url("../img/snow.jpeg");
+}
+
+.main-container.sleet{
+    background-image:url("../img/sleet.jpeg");
+}
+
+.main-container.drizzle{
+    background-image:url("../img/drizzle.jpeg");
+}
+
+.main-container.thunder,
+.main-container.thundery{
+    background-image:url("../img/thunder.jpeg");
+}
+
+.main-container.blizzard{
+    background-image:url("../img/blizzard.jpeg");
+}
+
+.main-container.fog{
+    background-image:url("../img/fog.jpeg");
+}
+
+.main-container.ice{
+    background-image:url("../img/ice.jpeg");
+}
+
+.main-container.shower{
+    background-image:url("../img/shower.jpeg");
+}
+
+.main-container.clear{
+    background-image:url("../img/clear.jpeg");
+}
+
+/* ==========================
+   Sidebar
+   (this is the big visual fix: the sidebar in the reference is a
+   translucent frosted-glass panel, not a solid white block)
+========================== */
+
+.side-container{
+    width:260px;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:40px;
+
+    border-right:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+}
+
+/* ==========================
+   Search Box
+========================== */
+
+.search-container{
+    width:100%;
+    display:flex;
+    align-items:center;
+
+    padding-bottom:6px;
+    margin-bottom:55px;
+
+    border-bottom:1px solid #fff;
+}
+
+.Weather-icon{
+    color:#fff;
+    display:flex;
+    align-items:center;
+}
+
+.geo-input{
+    all:unset;
+    flex:1;
+    margin:0 10px;
+
+    color:#fff;
+    font-size:13px;
+}
+
+.geo-input::placeholder{
+    color:rgba(255,255,255,.6);
+}
+
+.search-button{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    height:22px;
+    color:#fff;
+}
+
+/* ==========================
+   Day Stats
+========================== */
+
+.day-stats{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin-bottom:60px;
+}
+
+.day-stats__temperature{
+    color:#fff;
+    font-size:50px;
+    font-weight:500;
+    line-height:1;
+}
+
+.day-stats__temperature_value{
+    line-height:1;
+}
+
+.day-stats_feelslike{
+    color:#fff;
+    font-size:16px;
+    font-weight:300;
+
+    margin-top:10px;
+    margin-bottom:6px;
+}
+
+.day-stats_conditions{
+    width:100%;
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    list-style:none;
+}
+
+.day-stats_conditions li{
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:10px;
+}
+
+.day-stats_condition{
+    color:#fff;
+    font-size:24px;
+    font-weight:500;
+}
+
+.day-stats__conditions_text{
+    color:#fff;
+    font-size:13px;
+    opacity:.85;
+}
+
+/* ==========================
+   Weather Content
+   (a soft dark gradient replaces the old main-blur.png dependency —
+   guarantees text stays legible over any background photo)
+========================== */
+
+.weather-content{
+    flex:1;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:0 75px;
+
+    background:linear-gradient(to top, rgba(0,0,0,.4), rgba(0,0,0,0) 55%);
+}
+
+
+
+.secondary-title{
+    color:#fff;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    opacity:.85;
+    margin-bottom:17px;
+}
+
+.weather__primary-title{
+    color:#fff;
+    font-size:44px;
+    font-weight:500;
+    line-height:1;
+    letter-spacing:-1.9px;
+    text-transform:lowercase;
+
+    margin-bottom:16px;
+}
+
+.weather__location{
+    display:flex;
+    align-items:center;
+
+    margin-bottom:2px;
+}
+
+.location-icon{
+    margin-right:8px;
+    color:#fff;
+    display:flex;
+}
+
+.weather__location-text{
+    color:#fff;
+    font-size:13px;
+}
+
+.weather__primary-stats{
+    width:380px;
+
+    color:#fff;
+    font-size:13px;
+    line-height:1.6;
+    opacity:.9;
+
+    margin-bottom:80px;
+}
+
+/* ==========================
+   Forecast
+========================== */
+
+.forecast{
+    width:100%;
+
+    display:flex;
+    justify-content:space-around;
+
+    list-style:none;
+}
+
+.forecast-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.forecast-time{
+    color:#fff;
+    font-size:14px;
+    opacity:.9;
+
+    margin-bottom:4px;
+}
+
+.forecastWindText{
+    color:#fff;
+    font-size:12px;
+    opacity:.8;
+
+    margin-bottom:10px;
+}
+
+.forecast-temperature{
+    color:#fff;
+    font-size:40px;
+    font-weight:300;
+    line-height:1;
+}
+
+/* ==========================
+   Chart
+========================== */
+
+#chart{
+    width:100%;
+    max-height:180px; /* cap it so it can't push past the container */
+    margin:20px auto 0;
+}
